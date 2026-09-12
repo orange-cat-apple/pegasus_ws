@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - run: pip install pre-commit catkin_pkg
+      - run: pip install pre-commit catkin_pkg "empy<4" lark numpy
 
       - run: pre-commit run --all-files
 
@@ -26,6 +26,7 @@ jobs:
       - uses: ros-tooling/action-ros-ci@v0.3
         with:
           target-ros2-distro: humble
+          cmake-args: -DPython3_EXECUTABLE=/usr/bin/python3
 
       - name: SITL Drill Gate
         run: |
