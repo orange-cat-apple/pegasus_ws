@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.10'
 
-      - run: pip install pre-commit catkin_pkg "empy<4" lark
+      - run: pip install pre-commit catkin_pkg "empy<4" lark numpy
 
       - run: pre-commit run --all-files
 
