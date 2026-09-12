@@ -44,3 +44,31 @@ All code must pass strict acceptance criteria before merging into the main branc
 5. **Commit and Push:** Stage your files, commit with a clear message, and push your branch to GitHub.
 6. **Open a PR:** Open a Pull Request targeting the `main` branch.
 7. **Pass Gates:** Wait for the GitHub Actions CI pipeline to complete and resolve any reviewer feedback.
+
+# Pegasus Messages (`pegasus_msgs`)
+
+This package contains the centralized custom ROS 2 interface definitions for Project Pegasus. It dictates the standardized data structures used for cross-layer communication between the hardware, perception, and autonomy nodes.
+
+## Defined Interfaces
+
+### 1. OpticalFlow.msg
+Published by the Layer 1 sensors (`pmw3901_node`) to report planar velocity and sensor confidence.
+* `std_msgs/Header header`: Timestamp and coordinate frame ID.
+* `float32 velocity_x`: Pixel velocity in the X-axis.
+* `float32 velocity_y`: Pixel velocity in the Y-axis.
+* `uint8 surface_quality`: Ranging from 0 to 255, indicating the reliability of the flow measurement.
+
+### 2. Survivor3DArray.msg
+Published by the Layer 2 perception stack (`bbox_to_3d_projector`) to report localized targets.
+* `std_msgs/Header header`: Timestamp and coordinate frame ID.
+* `geometry_msgs/Point[] detections`: An array of 3D spatial coordinates indicating the metric location of identified targets.
+
+## Compilation
+This package uses the `rosidl_default_generators` pipeline. The C++ and Python headers are automatically generated during the colcon build phase.
+
+## Modification Policy
+Any structural changes to these interfaces require explicit architectural review and sign-off. Modifying these data types will directly impact the downstream Layer 2 EKF fusion and Layer 3 state machine dependencies.
+EOF
+git add src/pegasus_msgs/README.md
+git commit -m "docs: add README for custom ROS 2 interfaces"
+git push -u origin doc/pegasus-msgs-readme
