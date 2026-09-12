@@ -1,6 +1,6 @@
 # Project Pegasus
 
-Welcome to the Project Pegasus repository. This repository contains the ROS 2 software stack for a fully autonomous search-and-rescue quadrotor targeted for the NIDAR 2026-27 Competition[cite: 1]. 
+Welcome to the Project Pegasus repository. This repository contains the ROS 2 software stack for a fully autonomous search-and-rescue quadrotor targeted for the NIDAR 2026-27 Competition[cite: 1].
 
 ## Reference Documentation
 
@@ -42,5 +42,5 @@ All code must pass strict acceptance criteria before merging into the main branc
 3. **Test Locally:** Run `colcon build` and `colcon test` in your local workspace to verify functionality.
 4. **Format Code:** Run `pre-commit run --all-files` to ensure your code matches project styling standards.
 5. **Commit and Push:** Stage your files, commit with a clear message, and push your branch to GitHub.
-6. **Open a PR:** Open a Pull Request targeting the `main` branch. 
+6. **Open a PR:** Open a Pull Request targeting the `main` branch.
 7. **Pass Gates:** Wait for the GitHub Actions CI pipeline to complete and resolve any reviewer feedback.
