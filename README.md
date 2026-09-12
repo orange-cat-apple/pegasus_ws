@@ -5,7 +5,7 @@ Welcome to the Project Pegasus repository. This repository contains the ROS 2 so
 ## Reference Documentation
 
 For deep dives into the system design, refer to the official specification documents included in this repository:
-* [Pegasus_Software_Architecture_Spec.pdf](https://github.com/user-attachments/files/32138740/Pegasus_Software_Architecture_Spec.pdf)
+* [Pegasus_Software_Architecture_Spec.pdf](https://drive.google.com/file/d/1TzTBnPas7WcDgcZ-wT_qmfD6SKu9Gi7w/view?usp=drive_link)
 
 * [Pegasus_Hardware_Architecture_Spec.pdf](./Pegasus_Hardware_Architecture_Spec.pdf)
 
